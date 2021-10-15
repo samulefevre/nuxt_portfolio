@@ -1,7 +1,8 @@
 import { defineNuxtConfig } from 'nuxt3'
 
 export default defineNuxtConfig({
-    vite: false,
+    // vite: false,
+    components: true,
     build: {
         postcss: {
           postcssOptions: {
