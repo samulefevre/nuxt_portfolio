@@ -2,12 +2,12 @@
     <div
         class="text-blue-500 text-center flex flex-col h-full space-y-4 items-center justify-center"
     >
-        <h1 class="text-2xl">Bonjour,</h1>
-        <h2 class="text-5xl">Samuel LEFEVRE</h2>
-        <h3 class="text-white text-6xl">Développeur web et mobile</h3>
+        <p class="text-xl sm:text-2xl">Bonjour,</p>
+        <h2 class="text-2xl sm:text-5xl">Samuel LEFEVRE</h2>
+        <h3 class="text-white text-3xl sm:text-6xl">Développeur web et mobile</h3>
 
         <div class="py-8">
-            <button class="p-4 border-2 border-blue-500 rounded-md w-52">ABOUT</button>
+            <nuxt-link to="/about" class="block p-4 border-2 border-blue-500 rounded-md w-52">ABOUT</nuxt-link>
         </div>
 
         <div>

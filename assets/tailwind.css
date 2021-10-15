@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    h1 {
+      @apply font-extrabold tracking-tight text-6xl text-center text-blue-500 my-8;
+    }
+  }
+  
