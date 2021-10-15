@@ -5,10 +5,8 @@ import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-ic
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-
+library.add(faGithub, faTwitter, faLinkedin)
 
 export default defineNuxtPlugin(nuxtApp => {
-  library.add(faGithub, faTwitter, faLinkedin)
-  
-  nuxtApp.app.component('font-awesome-icon', FontAwesomeIcon)
+  nuxtApp.app.component('fa', FontAwesomeIcon)
 })

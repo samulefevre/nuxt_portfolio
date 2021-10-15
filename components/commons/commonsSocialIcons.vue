@@ -1,13 +1,13 @@
 <template>
-    <div class="flex flex-row space-x-4">
+    <div class="flex flex-row space-x-6">
         <div>
-            <font-awesome-icon :icon="['fab', 'github']" />
+            <fa :icon="['fab', 'github']" class="text-3xl cursor-pointer" />
         </div>
         <div>
-            <!-- <font-awesome-icon :icon="['fab', 'github']" />  -->
+             <fa :icon="['fab', 'twitter']" class="text-3xl cursor-pointer" />  
         </div>
         <div>
-            <!-- <font-awesome-icon :icon="['fab', 'github']" /> -->
+             <fa :icon="['fab', 'linkedin']" class="text-3xl cursor-pointer" /> 
         </div>
     </div>
 </template>
