@@ -12,6 +12,18 @@
   </div>
 </template>
 
+<script lang="ts">
+export default {
+  head: {
+    title: 'Portfolio Samuel LEFEVRE',
+    meta: {
+      name: 'description',
+      content: 'Portfolio Samuel LEFEVRE, développeur web et mobile.'
+    }
+  }
+}
+</script>
+
 <style>
 body {
   @apply bg-[#0F1624] text-white;
