@@ -1,5 +1,5 @@
 <template>
-    <div
+    <section
         class="text-blue-500 text-center flex flex-col h-full space-y-4 items-center justify-center"
     >
         <p class="text-xl sm:text-2xl">Bonjour,</p>
@@ -21,6 +21,6 @@
         <div>
             <CommonsSocialIcons class="block mt-20 text-white" />
         </div>
-    </div>
+    </section>
 </template>
 

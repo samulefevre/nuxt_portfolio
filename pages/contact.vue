@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col space-y-4 justify-center h-screen items-center">
+    <section class="flex flex-col space-y-4 justify-center h-screen items-center">
         <h1>Contact</h1>
         <div class="w-full text-center">
             <div
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full">
+    <section class="h-full">
         <h1>Portfolio</h1>
         <div class="flex flex-col space-y-4">
             <div
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>
