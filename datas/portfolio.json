@@ -1,41 +1,41 @@
 [
     {
-        "image": "/assets/portfolio/portfolio.png",
+        "image": "/portfolio/portfolio.png",
         "name": "Portfolio",
         "github": "https://github.com/samulefevre/flutter_portfolio",
         "description": "Portfolio website",
         "tags": ["Flutter"]
     },
     {
-        "image": "/assets/portfolio/calculator.png",
+        "image": "/portfolio/calculator.png",
         "name": "BMI Calculator",
         "github": "https://github.com/samulefevre/bmi_calculator",
         "description": "Calculate BMI.",
         "tags": ["Flutter"]
     },
     {
-        "image": "/assets/portfolio/flashchat.png",
+        "image": "/portfolio/flashchat.png",
         "name": "Flash Chat",
         "github": "https://github.com/samulefevre/flutter_flash_chat",
         "description": "Chat with firebase cloud firestore.",
         "tags": ["Flutter"]
     },
     {
-        "image": "/assets/portfolio/todoey.png",
+        "image": "/portfolio/todoey.png",
         "name": "Todoey",
         "github": "https://github.com/samulefevre/flutter_todoey",
         "description": "Todo with provider package.",
         "tags": ["Flutter"]
     },
     {
-        "image": "/assets/portfolio/clima.png",
+        "image": "/portfolio/clima.png",
         "name": "Clima",
         "github": "https://github.com/samulefevre/flutter_clima",
         "description": "Live web data from api.",
         "tags": ["Flutter"]
     },
     {
-        "image": "/assets/portfolio/bitcoin.png",
+        "image": "/portfolio/bitcoin.png",
         "name": "Bitcoin Ticker",
         "github": "https://github.com/samulefevre/flutter_bitcoin_ticker",
         "description": "Fetch prices with api.",
