@@ -4,5 +4,4 @@ export default defineEventHandler((event) => {
     return {
         ...portfolio
     }
-
 })
