@@ -11,6 +11,9 @@ dependencies:
   '@nuxt/ui':
     specifier: ^2.8.1
     version: 2.8.1(vue@3.3.4)(webpack@5.88.2)
+  '@vercel/analytics':
+    specifier: ^1.0.2
+    version: 1.0.2
 
 devDependencies:
   '@nuxt/devtools':
@@ -1887,6 +1890,10 @@ packages:
       unhead: 1.7.4
       vue: 3.3.4
     dev: true
+
+  /@vercel/analytics@1.0.2:
+    resolution: {integrity: sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==}
+    dev: false
 
   /@vercel/nft@0.23.1:
     resolution: {integrity: sha512-NE0xSmGWVhgHF1OIoir71XAd0W0C1UE3nzFyhpFiMr3rVhetww7NvM1kc41trBsPG37Bh+dE5FYCTMzM/gBu0w==}

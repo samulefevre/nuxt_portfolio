@@ -9,11 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.7.3",
-    "@nuxt/devtools": "latest"
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.7.3"
   },
   "dependencies": {
     "@iconify/json": "^2.2.117",
-    "@nuxt/ui": "^2.8.1"
+    "@nuxt/ui": "^2.8.1",
+    "@vercel/analytics": "^1.0.2"
   }
 }
