@@ -5,7 +5,7 @@
                 <UIcon name="i-mdi-github" class="w-12 h-12" />
             </NuxtLink>
         </div>
-        <div class="text-white">
+        <div>
             <NuxtLink to="https://twitter.com/samuel_lefevr" external>
                 <UIcon name="i-mdi-twitter" class="w-12 h-12" />
             </NuxtLink>

@@ -22,7 +22,7 @@ const isOpen = ref(false)
 
 </script>
 <template>
-    <header class="sticky w-full z-30 top-0 sm:h-16 bg-gray-900 border-b-2 border-gray-800 py-4">
+    <header class="sticky w-full z-30 top-0 sm:h-16 dark:bg-gray-900 border-b-2 border-gray-400/30 py-4">
         <UContainer class="h-full relative">
             <nav class="flex flex-col sm:flex-row gap-y-2 sm:gap-x-10 items-start sm:items-center text-lg h-full relavive ">
                 <div class="text-center text-xl text-primary-500 font-bold leading-tight w-full sm:hidden">
@@ -30,7 +30,8 @@ const isOpen = ref(false)
                 </div>
 
                 <ULink v-for="link in links" :key="link.name" :to="link.path"
-                    active-class="text-primary-500 bg-gray-800 px-4 py-1 rounded-lg" class="px-4 my-2 sm:block" :class="{
+                    active-class="bg-gray-400/20 dark:bg-gray-800 text-gray-500 dark:text-primary-500 px-4 py-1 rounded-lg"
+                    class="px-4 my-2 sm:block" :class="{
                         'hidden': !isOpen,
                         'block': isOpen
                     }">{{

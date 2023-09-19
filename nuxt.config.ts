@@ -4,5 +4,8 @@ export default defineNuxtConfig({
     ],
     ui: {
         icons: 'all'
+    },
+    colorMode: {
+        preference: 'dark',
     }
 })
