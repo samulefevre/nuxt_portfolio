@@ -30,12 +30,11 @@ const isOpen = ref(false)
                 </div>
 
                 <ULink v-for="link in links" :key="link.name" :to="link.path"
-                    active-class="dark:bg-gray-900 text-gray-500 dark:text-primary-500 px-4 py-1 rounded-lg"
-                    class="px-4 my-2 sm:block" :class="{
+                    active-class="text-gray-500 dark:text-primary-500" class="my-2 sm:block" :class="{
                         'hidden': !isOpen,
                         'block': isOpen
-                    }">{{
-    link.name }}
+                    }">
+                    {{ link.name }}
                 </ULink>
 
                 <UIcon v-if="!isOpen" name="i-ic-baseline-menu" class="absolute right-4 top-1 sm:hidden"
@@ -43,7 +42,6 @@ const isOpen = ref(false)
                 <UIcon v-if="isOpen" name="i-ic-baseline-close" class="absolute right-4 top-1 sm:hidden"
                     @click="isOpen = !isOpen" />
             </nav>
-
         </UContainer>
     </header>
 </template>
