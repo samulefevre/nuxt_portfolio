@@ -31,6 +31,6 @@ useHead({
 
 <style>
 h2 {
-    @apply font-bold text-3xl text-center tracking-tight text-primary-500;
+    @apply font-bold text-3xl text-center tracking-tight text-primary-400;
 }
 </style>

@@ -4,7 +4,7 @@
 
 @layer components {
   h1 {
-    @apply font-extrabold tracking-tight text-6xl text-center my-8 text-primary-500;
+    @apply font-extrabold tracking-tight text-4xl text-center my-8 text-primary-400;
   }
 }
 

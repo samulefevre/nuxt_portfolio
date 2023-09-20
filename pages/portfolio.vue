@@ -17,10 +17,13 @@ useHead({
     <UContainer>
         <h1>Portfolio</h1>
         <div class="flex flex-col gap-4 w-full">
-            <UCard v-for="project in portfolio">
-                <div class="flex flex-col sm:flex-row gap-8">
+            <UCard v-for="project in portfolio" :ui="{
+                background: ' dark:bg-gray-800',
+                ring: 'dark:ring-gray-700'
+            }">
+                <div class="flex flex-col sm:flex-row gap-8 ">
                     <div class="flex-none">
-                        <img :src="project.image" class="object-cover
+                        <NuxtImg :src="project.image" class="object-cover
                         object-center rounded-lg h-96 sm:h-44 w-full sm:w-44" />
                     </div>
                     <div class="flex flex-col justify-center w-full">
