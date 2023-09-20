@@ -1,15 +1,3 @@
-<script setup lang="ts">
-useHead({
-    title: 'Portfolio Samuel LEFEVRE',
-    meta: [
-        {
-            name: 'description',
-            content: 'Portfolio Samuel LEFEVRE, développeur web et mobile.',
-        },
-    ],
-});
-</script>
-
 <template>
     <UContainer>
         <h1 class="text-left">A propos</h1>

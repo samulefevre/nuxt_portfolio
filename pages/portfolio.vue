@@ -1,16 +1,5 @@
-import portfolio from '~/server/datas/portfolio.json';
 <script setup lang="ts">
 const { data: portfolio } = useFetch('/api/portfolio')
-
-useHead({
-    title: 'Portfolio Samuel LEFEVRE',
-    meta: [
-        {
-            name: 'description',
-            content: 'Portfolio Samuel LEFEVRE, développeur web et mobile.',
-        },
-    ],
-});
 </script>
 
 <template>
