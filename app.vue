@@ -1,5 +1,7 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage class="py-8 min-h-[var(--main-height)]" />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
