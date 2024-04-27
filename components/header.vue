@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { HeaderLink } from '@nuxt/ui-pro/types'
-const route = useRoute()
 
-console.log(route.hash)
+const route = useRoute()
 
 const title = 'Samuel LEFEVRE'
 
@@ -26,10 +25,13 @@ const links: Ref<HeaderLink[]> = computed(() => [
     label: 'Contact',
     to: '/#contact',
     active: route.hash === '#contact' ? true : false,
-  }
+  },
 ])
 </script>
 
 <template>
-  <UHeader :title="title" :links="links" />
+  <UHeader
+    :title="title"
+    :links="links"
+  />
 </template>

@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <LandingHero />
-        <LandingSkills />
-        <LandingPortfolio />
-        <LandingContact />
-    </div>
+  <div>
+    <LandingHero />
+    <LandingSkills />
+    <LandingPortfolio />
+    <LandingContact />
+  </div>
 </template>

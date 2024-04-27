@@ -4,7 +4,7 @@
       Copyright © {{ new Date().getFullYear() }}
     </template>
     <template #right>
-      <CommonsSocialIcons iconSize="sm" />
+      <socialIcons icon-size="sm" />
     </template>
   </UFooter>
 </template>
