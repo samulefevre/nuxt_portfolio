@@ -23,6 +23,9 @@ dependencies:
   '@vueuse/motion':
     specifier: ^2.1.0
     version: 2.1.0(vue@3.4.21)
+  nuxt-cloudflare-analytics:
+    specifier: ^1.0.8
+    version: 1.0.8
 
 devDependencies:
   '@nuxt/devtools':
@@ -6050,6 +6053,16 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
+
+  /nuxt-cloudflare-analytics@1.0.8:
+    resolution: {integrity: sha512-gUBcxHfvR06tBNDszTj/cMx8EGwtNFqICk7IBM66JIebe/VG0HgDF6AFJfqqOFG5ACk6ApdAxREHhvnmgUSudA==}
+    engines: {npm: '>= 4.0.0'}
+    dependencies:
+      '@nuxt/kit': 3.11.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
 
   /nuxt-icon@0.6.10(nuxt@3.11.2)(vite@5.2.8)(vue@3.4.21):
     resolution: {integrity: sha512-S9zHVA66ox4ZSpMWvCjqKZC4ZogC0s2z3vZs+M4D95YXGPEXwxDZu+insMKvkbe8+k7gvEmtTk0eq3KusKlxiw==}

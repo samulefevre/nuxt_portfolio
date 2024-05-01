@@ -1,6 +1,12 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
-  modules: ['@nuxt/ui', '@nuxt/image', '@vueuse/motion/nuxt', '@nuxt/eslint'],
+  modules: [
+    'nuxt-cloudflare-analytics',
+    '@nuxt/ui',
+    '@nuxt/image',
+    '@vueuse/motion/nuxt',
+    '@nuxt/eslint',
+  ],
   ui: {
     icons: 'all',
   },
@@ -33,5 +39,9 @@ export default defineNuxtConfig({
         semi: false,
       },
     },
+  },
+  cloudflareAnalytics: {
+    // See below for more options
+    token: process.env.NUXT_CLOUDFLARE_ANALYTICS_TOKEN || '', // Example 1a2b3v4a5er6ac7r8afd
   },
 })
