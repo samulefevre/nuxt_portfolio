@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: portfolio } = useFetch('/api/portfolio')
+import portfolio from '@/datas/portfolio.json'
 </script>
 
 <template>
