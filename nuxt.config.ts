@@ -1,5 +1,10 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
+  // Nuxt 4 directory structure and features
+  // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
+  future: { compatibilityVersion: 4 },
+  // Nuxt Modules
+  // https://nuxt.com/modules
   modules: [
     'nuxt-cloudflare-analytics',
     '@nuxt/ui',
@@ -22,7 +27,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: 'Portfolio Samuel LEFEVRE, développeur web et mobile (Nuxt 3, Node.js, Flutter).',
+          content: 'Portfolio Samuel LEFEVRE, Fullstack Développeur web Typescript (Nuxt3) et Flutter',
         },
       ],
 
