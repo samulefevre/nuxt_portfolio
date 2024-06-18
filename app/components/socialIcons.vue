@@ -28,9 +28,9 @@ const { iconSize } = withDefaults(defineProps<{
 
     <UButton
       :size="iconSize"
-      icon="i-simple-icons-github"
+      icon="i-simple-icons-linkedin"
       variant="ghost"
-      to="https://www.linkedin.com/in/samuel-lefevre-591446161/"
+      to="https://www.linkedin.com/in/samuel-lefevre"
       title="Linkedin logo"
       target="_blank"
     />
