@@ -13,7 +13,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.4.2",
     "@nuxt/eslint": "^0.5.7",
-    "nuxt": "3.12.2"
+    "nuxt": "3.21.1"
   },
   "dependencies": {
     "@iconify/json": "2.2.249",
