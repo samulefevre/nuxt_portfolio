@@ -1,37 +1,40 @@
 <script setup lang="ts">
-import type { HeaderLink } from '@nuxt/ui-pro/types'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
 
 const title = 'Samuel LEFEVRE'
 
-const links: Ref<HeaderLink[]> = computed(() => [
+const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Home',
     to: '/',
-    active: route.hash === '' ? true : false,
+    active: route.hash === '',
   },
   {
     label: 'Compétences',
-    to: { hash: '#skills', path: '/' },
-    active: route.hash === '#skills' ? true : false,
+    to: '/#skills',
+    active: route.hash === '#skills',
   },
   {
     label: 'Portfolio',
     to: '/#portfolio',
-    active: route.hash === '#portfolio' ? true : false,
+    active: route.hash === '#portfolio',
   },
   {
     label: 'Contact',
     to: '/#contact',
-    active: route.hash === '#contact' ? true : false,
+    active: route.hash === '#contact',
   },
 ])
 </script>
 
 <template>
-  <UHeader
-    :title="title"
-    :links="links"
-  />
+  <UHeader>
+    <template #title>
+      {{ title }}
+    </template>
+
+    <UNavigationMenu :items="items" />
+  </UHeader>
 </template>

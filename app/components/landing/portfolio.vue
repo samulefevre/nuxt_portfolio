@@ -3,31 +3,30 @@ import portfolio from '@/datas/portfolio.json'
 </script>
 
 <template>
-  <ULandingSection
+  <UPageSection
     id="portfolio"
     title="Portfolio"
     description="Sélection de projets"
   >
     <UPageGrid>
-      <ULandingCard
+      <UPageCard
         v-for="p of portfolio"
         :key="p.name"
         v-motion-slide-visible-bottom
         :title="p.name"
         :description="p.description"
         icon="i-heroicons-swatch"
-        color="primary"
         orientation="horizontal"
       >
         <NuxtImg
           :src="p.image"
           class="w-full h-36 rounded-md object-cover"
         />
-        <template #container>
+        <template #footer>
           <UBadge
             v-for="t of p.tags"
             :key="t"
-            :color="t === 'Nuxt.js' ? 'blue' : 'gray'"
+            :color="t.startsWith('Nuxt') ? 'primary' : 'neutral'"
             class="mr-2 my-2"
           >
             {{ t }}
@@ -37,13 +36,12 @@ import portfolio from '@/datas/portfolio.json'
             target="_blank"
             color="primary"
             variant="ghost"
-            icon="i-heroicons-arrow-up-right-20-solid"
-            :trailing="true"
+            trailing-icon="i-heroicons-arrow-up-right-20-solid"
           >
             Voir le projet
           </UButton>
         </template>
-      </ULandingCard>
+      </UPageCard>
     </UPageGrid>
-  </ULandingSection>
+  </UPageSection>
 </template>

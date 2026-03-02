@@ -1,5 +1,5 @@
 <template>
-  <ULandingSection
+  <UPageSection
     id="contact"
     title="Contact"
   >
@@ -8,14 +8,12 @@
         title="Contactez-moi"
         description="Vous avez un projet ou une question ? N'hésitez pas à me contacter."
         icon="i-material-symbols-android-contacts"
-        color="primary"
         class="w-full"
       >
         <template #description>
           <ULink
-            href="mailto:samuel.lefevr@gmail.com"
-            color="primary"
-            class="font-bold"
+            to="mailto:samuel.lefevr@gmail.com"
+            class="font-bold text-primary"
           >
             samuel.lefevr@gmail.com
           </ULink>
@@ -26,7 +24,6 @@
         title="Où me trouver ?"
         description="Retrouvez-moi sur les réseaux sociaux."
         icon="i-material-symbols-search-rounded"
-        color="primary"
         class="w-full"
       >
         <template #description>
@@ -34,5 +31,5 @@
         </template>
       </UPageCard>
     </UPageGrid>
-  </ULandingSection>
+  </UPageSection>
 </template>

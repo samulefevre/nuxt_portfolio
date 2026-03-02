@@ -1,9 +1,7 @@
 <script setup lang="ts">
-const { iconSize } = withDefaults(defineProps<{
+const { iconSize = 'xl' } = defineProps<{
   iconSize?: 'sm' | 'xl'
-}>(), {
-  iconSize: 'xl',
-})
+}>()
 </script>
 
 <template>
