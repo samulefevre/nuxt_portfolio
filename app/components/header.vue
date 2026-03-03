@@ -8,14 +8,15 @@ const activeSection = ref('')
 // Gestion de la navigation
 const handleNavigation = async (to: string) => {
   if (to === '/') {
+    // Scroll vers le haut
     window.scrollTo({ top: 0, behavior: 'smooth' })
     activeSection.value = ''
-    if (route.path !== '/') {
-      await router.push('/')
-    }
+    
+    // Enlever le hash de l'URL
+    await router.push('/')
   } else if (to.startsWith('/#')) {
-    const hash = to.substring(1)
-    const targetId = hash.substring(1)
+    const hash = to.substring(1) // Enlève le /
+    const targetId = hash.substring(1) // Enlève le #
     const target = document.getElementById(targetId)
     
     if (target) {
@@ -31,17 +32,14 @@ const handleNavigation = async (to: string) => {
       // Force l'activation de la section
       activeSection.value = hash
       
-      if (route.path === '/') {
-        window.history.replaceState({}, '', to)
-      } else {
-        await router.push(to)
-      }
+      // Met à jour l'URL avec le hash
+      await router.push({ path: '/', hash })
     }
   }
 }
 
 watch(() => route.fullPath, (newPath) => {
-  if (newPath === '/') {
+  if (newPath === '/' || !route.hash) {
     activeSection.value = ''
   } else if (route.hash) {
     activeSection.value = route.hash
@@ -59,6 +57,10 @@ onMounted(() => {
     // Si on est en haut de la page
     if (scrollY < 200) {
       activeSection.value = ''
+      // Enlever le hash si on scroll en haut
+      if (route.hash) {
+        router.replace('/')
+      }
       return
     }
     
@@ -66,7 +68,12 @@ onMounted(() => {
     if (scrollY + windowHeight >= documentHeight - 100) {
       const lastSection = sections[sections.length - 1]
       if (lastSection?.id) {
-        activeSection.value = '#' + lastSection.id
+        const newHash = '#' + lastSection.id
+        activeSection.value = newHash
+        // Met à jour l'URL
+        if (route.hash !== newHash) {
+          router.replace({ path: '/', hash: newHash })
+        }
         return
       }
     }
@@ -76,13 +83,20 @@ onMounted(() => {
     
     for (let i = sections.length - 1; i >= 0; i--) {
       const section = sections[i]
-      if (section && section.offsetTop - 200 <= scrollY) {
+      if (section.offsetTop - 200 <= scrollY) {
         currentSection = '#' + section.id
         break
       }
     }
     
     activeSection.value = currentSection
+    
+    // Met à jour l'URL avec le hash correspondant
+    if (currentSection && route.hash !== currentSection) {
+      router.replace({ path: '/', hash: currentSection })
+    } else if (!currentSection && route.hash) {
+      router.replace('/')
+    }
   }
   
   window.addEventListener('scroll', updateActiveSection, { passive: true })
@@ -149,6 +163,8 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
 ])
 </script>
+
+
 
 
 
