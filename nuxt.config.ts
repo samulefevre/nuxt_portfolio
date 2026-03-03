@@ -1,14 +1,12 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2026-03-03',
   modules: [
     '@nuxt/ui',
     '@nuxt/image',
     '@vueuse/motion/nuxt',
     '@nuxt/eslint',
   ],
-  css: ['~/assets/css/tailwind.css'],
-  colorMode: {
-    preference: 'dark',
-  },
+  css: ['~/assets/css/main.css'],
   app: {
     head: {
       htmlAttrs: {
@@ -21,15 +19,6 @@ export default defineNuxtConfig({
           content: 'Portfolio Samuel LEFEVRE, Fullstack Développeur web Typescript (Nuxt3) et Flutter',
         },
       ],
-      script: process.env.NUXT_CLOUDFLARE_ANALYTICS_TOKEN
-        ? [
-            {
-              src: 'https://static.cloudflareinsights.com/beacon.min.js',
-              defer: true,
-              'data-cf-beacon': `{"token":"${process.env.NUXT_CLOUDFLARE_ANALYTICS_TOKEN}"}`,
-            },
-          ]
-        : [],
     },
   },
   devtools: {
@@ -43,5 +32,8 @@ export default defineNuxtConfig({
         semi: false,
       },
     },
+  },
+  colorMode: {
+    preference: 'dark',
   },
 })

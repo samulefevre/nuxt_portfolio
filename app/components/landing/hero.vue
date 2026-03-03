@@ -9,11 +9,12 @@ const links: ButtonProps[] = [
 </script>
 
 <template>
-  <UPageHero
-    id="hero"
+  <section>
+    <UPageHero
     v-motion-roll-visible-once-top
     title="Freelance Fullstack Développeur"
     description="Je réalise vos projets web et mobiles. Je suis développeur Typescript (Nuxt.js) et Dart (Flutter)"
     :links="links"
   />
+  </section>
 </template>

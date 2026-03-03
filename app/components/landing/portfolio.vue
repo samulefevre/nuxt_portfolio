@@ -13,6 +13,7 @@ import portfolio from '@/datas/portfolio.json'
         v-for="p of portfolio"
         :key="p.name"
         v-motion-slide-visible-bottom
+        variant="subtle"
         :title="p.name"
         :description="p.description"
         icon="i-heroicons-swatch"
@@ -26,7 +27,8 @@ import portfolio from '@/datas/portfolio.json'
           <UBadge
             v-for="t of p.tags"
             :key="t"
-            :color="t.startsWith('Nuxt') ? 'primary' : 'neutral'"
+            color="neutral"
+            variant="subtle"
             class="mr-2 my-2"
           >
             {{ t }}

@@ -31,6 +31,7 @@ const modules = [
         :key="index"
         v-bind="module"
         v-motion-slide-visible-bottom
+        variant="subtle"
       >
         <template #description>
           <span class="line-clamp-2">{{ module.description }}</span>

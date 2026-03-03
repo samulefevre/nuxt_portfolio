@@ -9,6 +9,7 @@
         description="Vous avez un projet ou une question ? N'hésitez pas à me contacter."
         icon="i-material-symbols-android-contacts"
         class="w-full"
+        variant="subtle"
       >
         <template #description>
           <ULink
@@ -25,6 +26,7 @@
         description="Retrouvez-moi sur les réseaux sociaux."
         icon="i-material-symbols-search-rounded"
         class="w-full"
+        variant="subtle"
       >
         <template #description>
           <socialIcons class="mt-4 h-12" />
