@@ -83,7 +83,7 @@ onMounted(() => {
     
     for (let i = sections.length - 1; i >= 0; i--) {
       const section = sections[i]
-      if (section.offsetTop - 200 <= scrollY) {
+      if (section && section.offsetTop - 200 <= scrollY) {
         currentSection = '#' + section.id
         break
       }
