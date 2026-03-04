@@ -21,7 +21,7 @@ const modules = [
 </script>
 
 <template>
-  <ULandingSection
+  <UPageSection
     id="skills"
     title="Compétences"
   >
@@ -31,12 +31,12 @@ const modules = [
         :key="index"
         v-bind="module"
         v-motion-slide-visible-bottom
-        target="_blank"
+        variant="subtle"
       >
         <template #description>
           <span class="line-clamp-2">{{ module.description }}</span>
         </template>
       </UPageCard>
     </UPageGrid>
-  </ULandingSection>
+  </UPageSection>
 </template>

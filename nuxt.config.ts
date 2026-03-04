@@ -1,23 +1,12 @@
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-  // Nuxt 4 directory structure and features
-  // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
-  future: { compatibilityVersion: 4 },
-  // Nuxt Modules
-  // https://nuxt.com/modules
+  compatibilityDate: '2026-03-03',
   modules: [
-    'nuxt-cloudflare-analytics',
     '@nuxt/ui',
     '@nuxt/image',
     '@vueuse/motion/nuxt',
     '@nuxt/eslint',
   ],
-  ui: {
-    icons: 'all',
-  },
-  colorMode: {
-    preference: 'dark',
-  },
+  css: ['~/assets/css/main.css'],
   app: {
     head: {
       htmlAttrs: {
@@ -30,7 +19,6 @@ export default defineNuxtConfig({
           content: 'Portfolio Samuel LEFEVRE, Fullstack Développeur web Typescript (Nuxt3) et Flutter',
         },
       ],
-
     },
   },
   devtools: {
@@ -45,8 +33,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  cloudflareAnalytics: {
-    // See below for more options
-    token: process.env.NUXT_CLOUDFLARE_ANALYTICS_TOKEN || '', // Example 1a2b3v4a5er6ac7r8afd
+  colorMode: {
+    preference: 'dark',
   },
 })
