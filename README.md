@@ -1,17 +1,10 @@
-# Portfolio with Nuxt 4
+# Portfolio de Samuel Lefèvre
 
-## Setup
-
-Make sure to install the dependencies
+Site personnel construit avec Nuxt 4. L'accueil présente l'expertise, l'approche d'architecture et les coordonnées professionnelles.
 
 ```bash
 pnpm install
+pnpm dev
 ```
 
-## Development
-
-Start the development server on <http://localhost:3000>
-
-```bash
-pnpm run dev
-```
+Vérification locale : `pnpm lint`, `pnpm typecheck`, `pnpm build`.

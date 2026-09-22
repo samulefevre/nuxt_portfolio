@@ -1,9 +1,7 @@
-export default withNuxt(
-  // Your custom configs here
-  {
-    rules: {
-      'vue/multi-word-component-names': 0,
-      'vue/valid-v-slot': 0,
-    },
+import withNuxt from './.nuxt/eslint.config.mjs'
+
+export default withNuxt({
+  rules: {
+    'vue/multi-word-component-names': 0,
   },
-)
+})

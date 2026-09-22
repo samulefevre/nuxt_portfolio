@@ -1,37 +1,42 @@
 <template>
-  <UPageSection
+  <section
     id="contact"
-    title="Contact"
+    class="contact-section"
   >
-    <UPageGrid v-motion-slide-visible-right>
-      <UPageCard
-        title="Contactez-moi"
-        description="Vous avez un projet ou une question ? N'hésitez pas à me contacter."
-        icon="i-material-symbols-android-contacts"
-        class="w-full"
-        variant="subtle"
-      >
-        <template #description>
-          <ULink
-            to="mailto:samuel.lefevr@gmail.com"
-            class="font-bold text-primary"
-          >
-            samuel.lefevr@gmail.com
-          </ULink>
-        </template>
-      </UPageCard>
-
-      <UPageCard
-        title="Où me trouver ?"
-        description="Retrouvez-moi sur les réseaux sociaux."
-        icon="i-material-symbols-search-rounded"
-        class="w-full"
-        variant="subtle"
-      >
-        <template #description>
-          <socialIcons class="mt-4 h-12" />
-        </template>
-      </UPageCard>
-    </UPageGrid>
-  </UPageSection>
+    <div class="shell contact-inner">
+      <div>
+        <p class="eyebrow eyebrow-light">
+          CONTACT / COLLABORATION
+        </p>
+        <h2>Vous avez un projet<br><em>à construire&nbsp;?</em></h2>
+        <p>Échangeons sur vos besoins, vos contraintes et la meilleure façon d’avancer.</p>
+      </div>
+      <div class="contact-actions">
+        <a
+          class="contact-email"
+          href="mailto:samuel.lefevr@gmail.com"
+        >Discuter de votre projet <span aria-hidden="true">↗</span></a>
+        <div
+          class="contact-socials"
+          aria-label="Profils professionnels"
+        >
+          <a
+            href="https://www.malt.fr/profile/samuellefevre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Malt ↗</a>
+          <a
+            href="https://github.com/samulefevre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >GitHub ↗</a>
+          <a
+            href="https://www.linkedin.com/in/samuel-lefevre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>

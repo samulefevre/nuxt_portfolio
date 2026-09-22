@@ -1,39 +1,22 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2026-03-03',
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/image',
-    '@vueuse/motion/nuxt',
-    '@nuxt/eslint',
-  ],
-  css: ['~/assets/css/main.css'],
+  modules: ['@nuxt/eslint'],
+  devtools: { enabled: false },
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'fr',
-      },
-      title: 'Portfolio Samuel LEFEVRE',
+      htmlAttrs: { lang: 'fr' },
+      title: 'Samuel Lefèvre — Développeur full-stack TypeScript',
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
       meta: [
-        {
-          name: 'description',
-          content: 'Portfolio Samuel LEFEVRE, Fullstack Développeur web Typescript (Nuxt3) et Flutter',
-        },
+        { name: 'description', content: 'Développeur full-stack TypeScript indépendant. Architecture web et SaaS, Nuxt, backend et Cloudflare, de la conception au déploiement.' },
+        { name: 'theme-color', content: '#f7f9f7' },
       ],
     },
   },
-  devtools: {
-    enabled: false,
-  },
+  css: ['~/assets/css/main.css'],
+  compatibilityDate: '2026-09-22',
   eslint: {
     config: {
-      stylistic: {
-        indent: 2,
-        quotes: 'single',
-        semi: false,
-      },
+      stylistic: { indent: 2, quotes: 'single', semi: false },
     },
-  },
-  colorMode: {
-    preference: 'dark',
   },
 })

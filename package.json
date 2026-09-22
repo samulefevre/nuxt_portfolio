@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "samuel-lefevre-portfolio",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -8,22 +8,19 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "typecheck": "nuxt typecheck"
   },
   "devDependencies": {
-    "@iconify-json/heroicons": "^1.2.3",
-    "@iconify-json/lucide": "^1.2.95",
-    "@iconify-json/material-symbols": "^1.2.59",
-    "@iconify-json/simple-icons": "^1.2.72",
-    "@iconify-json/tabler": "^1.2.28",
-    "@nuxt/eslint": "^1.15.2",
-    "nuxt": "^4.3.1"
+    "@nuxt/eslint": "^1.17.0",
+    "eslint": "^10.11.0",
+    "nuxt": "^4.5.2",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.11"
   },
+  "packageManager": "pnpm@10.30.3",
   "dependencies": {
-    "@nuxt/image": "^2.0.0",
-    "@nuxt/ui": "^4.5.1",
-    "@vueuse/motion": "^3.0.3",
-    "tailwindcss": "^4.2.1"
-  },
-  "packageManager": "pnpm@10.30.3"
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource/dm-mono": "^5.3.0"
+  }
 }

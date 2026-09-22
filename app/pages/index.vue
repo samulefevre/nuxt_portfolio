@@ -1,8 +1,11 @@
 <template>
-  <div>
+  <div class="page-content">
     <LandingHero />
-    <LandingSkills />
-    <LandingPortfolio />
+    <LandingExpertise />
+    <LandingEngineering />
+    <LandingArchitecture />
+    <LandingStack />
+    <LandingAbout />
     <LandingContact />
   </div>
 </template>
