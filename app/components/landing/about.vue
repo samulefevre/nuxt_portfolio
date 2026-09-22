@@ -1,17 +1,17 @@
 <template>
-  <section
+  <UPageSection
     id="about"
-    class="section shell about-section"
+    headline="À propos"
+    orientation="horizontal"
+    class="portfolio-section portfolio-about"
   >
-    <div class="section-heading">
-      <p class="eyebrow">
-        À PROPOS
-      </p><h2>Bonjour, moi c’est<br><em>Samuel.</em></h2>
-    </div>
-    <div class="about-copy">
+    <template #title>
+      Bonjour, moi c’est<br><em>Samuel.</em>
+    </template>
+    <div class="portfolio-about-copy">
       <p>Développeur full-stack spécialisé dans l’écosystème TypeScript et Nuxt, je travaille sur des applications SaaS, des architectures modulaires et des environnements cloud modernes.</p>
       <p>J’interviens sur les choix d’architecture comme sur leur mise en œuvre : interface, API, données, authentification et automatisation.</p>
       <span>Basé en France · Travail à distance</span>
     </div>
-  </section>
+  </UPageSection>
 </template>

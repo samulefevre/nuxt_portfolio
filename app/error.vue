@@ -1,7 +1,5 @@
-<script setup>
-const props = defineProps({
-  error: { type: Object, required: true },
-})
+<script setup lang="ts">
+const props = defineProps<{ error: { statusCode: number } }>()
 
 useSeoMeta({
   title: 'Page introuvable — Samuel Lefèvre',
@@ -10,25 +8,22 @@ useSeoMeta({
 </script>
 
 <template>
-  <div
-    id="top"
-    class="site-frame"
-  >
-    <Header />
-    <main
-      id="main-content"
-      class="error-page shell"
+  <UApp>
+    <div
+      id="top"
+      class="min-h-screen"
     >
-      <p class="eyebrow">
-        ERREUR {{ props.error.statusCode }}
-      </p>
-      <h1>Cette page est introuvable.</h1>
-      <p>Le lien a peut-être changé. Vous pouvez revenir à l’accueil.</p>
-      <NuxtLink
-        class="button button-primary"
-        to="/"
-      >Retour à l’accueil <span aria-hidden="true">↗</span></NuxtLink>
-    </main>
-    <Footer />
-  </div>
+      <Header />
+      <UMain id="main-content">
+        <UPageHero
+          :headline="`Erreur ${props.error.statusCode}`"
+          title="Cette page est introuvable."
+          description="Le lien a peut-être changé. Vous pouvez revenir à l’accueil."
+          :links="[{ label: 'Retour à l’accueil', to: '/', trailingIcon: 'i-lucide-arrow-up-right' }]"
+          :ui="{ title: 'font-display tracking-tight' }"
+        />
+      </UMain>
+      <Footer />
+    </div>
+  </UApp>
 </template>

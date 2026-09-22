@@ -1,63 +1,65 @@
+<script setup lang="ts">
+const products = [
+  { title: 'Applications SaaS', description: 'Comptes, équipes, rôles, abonnements, paiements et automatisations réunis dans un produit cohérent.', glyph: '◇' },
+  { title: 'Applications métier', description: 'Interfaces complexes, règles métier, tableaux de bord, API et intégrations avec vos outils.', glyph: '▤' },
+  { title: 'Plateformes web', description: 'Des expériences rapides et accessibles, du rendu serveur aux services cloud.', glyph: '⌘' },
+]
+const tags = ['Nuxt', 'TypeScript', 'NuxtHub', 'Cloudflare']
+</script>
+
 <template>
-  <section
+  <UPageSection
     id="engineering"
-    class="section engineering-section"
+    headline="Engineering"
+    description="Des produits complets, pensés pour leurs utilisateurs et les équipes qui les font évoluer."
+    orientation="horizontal"
+    class="portfolio-section portfolio-engineering"
   >
-    <div class="shell engineering-inner">
-      <div class="section-heading">
-        <p class="eyebrow">
-          ENGINEERING
-        </p>
-        <h2>Ce que je<br><em>construis.</em></h2>
-        <p>Des produits complets, pensés pour leurs utilisateurs et les équipes qui les font évoluer.</p>
-      </div>
-      <div class="engineering-list">
-        <article>
-          <span
-            class="engineering-icon"
-            aria-hidden="true"
-          >◇</span>
-          <div><h3>Applications SaaS</h3><p>Comptes, équipes, rôles, abonnements, paiements et automatisations réunis dans un produit cohérent.</p></div>
-          <span
-            class="engineering-arrow"
-            aria-hidden="true"
-          >↗</span>
-        </article>
-        <article>
-          <span
-            class="engineering-icon"
-            aria-hidden="true"
-          >▤</span>
-          <div><h3>Applications métier</h3><p>Interfaces complexes, règles métier, tableaux de bord, API et intégrations avec vos outils.</p></div>
-          <span
-            class="engineering-arrow"
-            aria-hidden="true"
-          >↗</span>
-        </article>
-        <article>
-          <span
-            class="engineering-icon"
-            aria-hidden="true"
-          >⌘</span>
-          <div><h3>Plateformes web</h3><p>Des expériences rapides et accessibles, du rendu serveur aux services cloud.</p></div>
-          <span
-            class="engineering-arrow"
-            aria-hidden="true"
-          >↗</span>
-        </article>
-      </div>
+    <template #title>
+      Ce que je<br><em>construis.</em>
+    </template>
+    <div class="portfolio-engineering-list">
+      <UPageFeature
+        v-for="product in products"
+        :key="product.title"
+        :title="product.title"
+        :description="product.description"
+        orientation="horizontal"
+        class="portfolio-engineering-feature"
+      >
+        <template #leading>
+          <span aria-hidden="true">{{ product.glyph }}</span>
+        </template>
+        <template #title>
+          <h3>{{ product.title }}</h3>
+        </template>
+      </UPageFeature>
     </div>
-    <div class="shell case-study">
-      <div class="case-label">
-        <span class="status-dot" /> EN COURS · ÉTUDE DE CAS
-      </div>
-      <div>
-        <h3>Architecture SaaS modulaire</h3>
-        <p>Un socle Nuxt conçu pour générer des applications dont le code reste entre les mains du développeur. Le travail porte sur les frontières métier, l’authentification, les données, les paiements et le déploiement sur plusieurs fournisseurs.</p>
-        <div class="case-tags">
-          <span>Nuxt</span><span>TypeScript</span><span>NuxtHub</span><span>Cloudflare</span>
-        </div>
-      </div>
-    </div>
-  </section>
+
+    <template #bottom>
+      <UContainer class="portfolio-case-shell">
+        <UCard
+          variant="soft"
+          class="portfolio-case"
+          :ui="{ header: 'p-0 sm:p-0', body: 'p-0 sm:p-0' }"
+        >
+          <template #header>
+            <span class="portfolio-case-label"><span class="portfolio-status-dot" />EN COURS · ÉTUDE DE CAS</span>
+          </template>
+          <h3>Architecture SaaS modulaire</h3>
+          <p>Un socle Nuxt conçu pour générer des applications dont le code reste entre les mains du développeur. Le travail porte sur les frontières métier, l’authentification, les données, les paiements et le déploiement sur plusieurs fournisseurs.</p>
+          <div class="portfolio-case-tags">
+            <UBadge
+              v-for="tag in tags"
+              :key="tag"
+              color="neutral"
+              variant="outline"
+            >
+              {{ tag }}
+            </UBadge>
+          </div>
+        </UCard>
+      </UContainer>
+    </template>
+  </UPageSection>
 </template>

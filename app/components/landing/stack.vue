@@ -8,21 +8,21 @@ const groups = [
 </script>
 
 <template>
-  <section class="section stack-section">
-    <div class="shell stack-inner">
-      <div class="section-heading">
-        <p class="eyebrow">
-          STACK
-        </p><h2>Les outils au service<br><em>des enjeux.</em></h2>
+  <UPageSection
+    headline="Stack"
+    orientation="horizontal"
+    class="portfolio-section portfolio-stack"
+  >
+    <template #title>
+      Les outils au service<br><em>des enjeux.</em>
+    </template>
+    <dl class="portfolio-stack-list">
+      <div
+        v-for="group in groups"
+        :key="group.name"
+      >
+        <dt>{{ group.name }}</dt><dd>{{ group.tools }}</dd>
       </div>
-      <dl class="stack-list">
-        <div
-          v-for="group in groups"
-          :key="group.name"
-        >
-          <dt>{{ group.name }}</dt><dd>{{ group.tools }}</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
+    </dl>
+  </UPageSection>
 </template>

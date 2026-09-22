@@ -1,23 +1,66 @@
+<script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
+const items: NavigationMenuItem[] = [
+  { label: 'Expertise', to: '/#expertise' },
+  { label: 'Engineering', to: '/#engineering' },
+  { label: 'À propos', to: '/#about' },
+]
+</script>
+
 <template>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <NuxtLink
-        class="wordmark"
+  <UHeader
+    title="Samuel Lefèvre"
+    to="/"
+    class="portfolio-header"
+  >
+    <template #left>
+      <ULink
         to="/"
         aria-label="Samuel Lefèvre, accueil"
-      >SL<span>.</span></NuxtLink>
-      <nav
-        aria-label="Navigation principale"
-        class="primary-nav"
+        class="portfolio-wordmark"
       >
-        <a href="/#expertise">Expertise</a>
-        <a href="/#engineering">Engineering</a>
-        <a href="/#about">À propos</a>
-      </nav>
-      <a
-        class="header-contact"
-        href="/#contact"
-      >Me contacter <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
+        SL<span>.</span>
+      </ULink>
+    </template>
+
+    <UNavigationMenu
+      :items="items"
+      variant="link"
+      class="portfolio-nav"
+    />
+
+    <template #right>
+      <UColorModeButton
+        color="neutral"
+        variant="ghost"
+        aria-label="Changer de thème clair ou sombre"
+        class="portfolio-theme-toggle"
+      />
+      <UButton
+        to="/#contact"
+        label="Me contacter"
+        trailing-icon="i-lucide-arrow-up-right"
+        color="neutral"
+        variant="outline"
+        class="portfolio-header-contact hidden sm:inline-flex"
+      />
+    </template>
+
+    <template #body>
+      <UNavigationMenu
+        :items="items"
+        orientation="vertical"
+        variant="link"
+        class="-mx-2"
+      />
+      <USeparator class="my-5" />
+      <UButton
+        to="/#contact"
+        label="Me contacter"
+        trailing-icon="i-lucide-arrow-up-right"
+        block
+      />
+    </template>
+  </UHeader>
 </template>

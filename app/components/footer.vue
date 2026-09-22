@@ -1,10 +1,27 @@
 <template>
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <span>© {{ new Date().getFullYear() }} Samuel Lefèvre</span>
-      <span>Conçu et développé avec Nuxt.</span>
-      <NuxtLink to="/mentions-legales">Mentions légales</NuxtLink>
-      <a href="#top">Retour en haut ↑</a>
-    </div>
-  </footer>
+  <UFooter class="portfolio-footer">
+    <template #left>
+      <p>© {{ new Date().getFullYear() }} Samuel Lefèvre</p>
+    </template>
+
+    <p>Conçu et développé avec Nuxt.</p>
+
+    <template #right>
+      <UButton
+        to="/mentions-legales"
+        label="Mentions légales"
+        color="neutral"
+        variant="link"
+        size="sm"
+      />
+      <UButton
+        to="/#top"
+        label="Retour en haut"
+        trailing-icon="i-lucide-arrow-up"
+        color="neutral"
+        variant="link"
+        size="sm"
+      />
+    </template>
+  </UFooter>
 </template>

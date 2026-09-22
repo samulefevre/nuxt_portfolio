@@ -1,5 +1,5 @@
 <template>
-  <div class="page-content">
+  <UPage>
     <LandingHero />
     <LandingExpertise />
     <LandingEngineering />
@@ -7,5 +7,5 @@
     <LandingStack />
     <LandingAbout />
     <LandingContact />
-  </div>
+  </UPage>
 </template>

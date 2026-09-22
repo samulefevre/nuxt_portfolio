@@ -1,16 +1,16 @@
 <template>
   <div
     id="top"
-    class="site-frame"
+    class="min-h-screen"
   >
     <a
-      class="skip-link"
       href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-60 focus:m-4 focus:rounded-md focus:bg-default focus:p-3 focus:ring focus:ring-primary"
     >Aller au contenu</a>
     <Header />
-    <main id="main-content">
+    <UMain id="main-content">
       <slot />
-    </main>
+    </UMain>
     <Footer />
   </div>
 </template>

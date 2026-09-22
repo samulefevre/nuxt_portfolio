@@ -1,57 +1,86 @@
+<script setup lang="ts">
+const steps = [
+  { title: 'Comprendre', description: 'Le besoin et les règles métier' },
+  { title: 'Concevoir', description: 'Des frontières claires' },
+  { title: 'Développer', description: 'Une base testable et évolutive' },
+  { title: 'Déployer', description: 'Automatiser et observer' },
+]
+</script>
+
 <template>
-  <section
-    class="hero shell"
-    aria-labelledby="hero-title"
+  <UPageHero
+    orientation="horizontal"
+    class="portfolio-hero"
   >
-    <div class="hero-copy">
-      <p class="eyebrow">
-        <span class="status-dot" /> Samuel Lefèvre · Développeur full-stack TypeScript
-      </p>
-      <h1 id="hero-title">
-        Des logiciels pensés <em>pour durer.</em>
-      </h1>
-      <p class="hero-lead">
-        Je conçois et développe des applications web robustes et maintenables, de l’architecture métier jusqu’au déploiement.
-      </p>
-      <div class="hero-actions">
-        <a
-          class="button button-primary"
-          href="#contact"
-        >Parlons de votre projet <span aria-hidden="true">↗</span></a>
-        <a
-          class="text-link"
-          href="#expertise"
-        >Explorer mon expertise <span aria-hidden="true">↓</span></a>
+    <template #headline>
+      <span class="portfolio-eyebrow"><span class="portfolio-status-dot" />Samuel Lefèvre · Développeur full-stack TypeScript</span>
+    </template>
+
+    <template #title>
+      Des logiciels pensés <em>pour durer.</em>
+    </template>
+
+    <template #description>
+      Je conçois et développe des applications web robustes et maintenables, de l’architecture métier jusqu’au déploiement.
+    </template>
+
+    <template #footer>
+      <div class="portfolio-hero-actions">
+        <UButton
+          to="/#contact"
+          label="Parlons de votre projet"
+          trailing-icon="i-lucide-arrow-up-right"
+          color="neutral"
+          variant="solid"
+          class="portfolio-primary-button"
+        />
+        <UButton
+          to="/#expertise"
+          label="Explorer mon expertise"
+          trailing-icon="i-lucide-arrow-down"
+          color="neutral"
+          variant="link"
+          class="portfolio-text-button"
+        />
       </div>
-      <p class="hero-stack">
+      <p class="portfolio-hero-stack">
         Nuxt <span>·</span> TypeScript <span>·</span> PostgreSQL <span>·</span> Cloudflare <span>·</span> Flutter
       </p>
-    </div>
-    <div
-      class="hero-diagram"
+    </template>
+
+    <UCard
+      variant="soft"
+      class="portfolio-diagram blueprint-grid"
       aria-label="Du besoin métier à une application déployée"
+      :ui="{ header: 'p-0 sm:p-0', body: 'p-0 sm:p-0', footer: 'p-0 sm:p-0' }"
     >
-      <div class="diagram-header">
-        <span class="diagram-mark">//</span> UNE APPLICATION, DE BOUT EN BOUT <span class="diagram-index">01—04</span>
-      </div>
-      <div class="diagram-node">
-        <span class="node-number">01</span><div><strong>Comprendre</strong><small>Le besoin & les règles métier</small></div><span class="node-symbol">↗</span>
-      </div>
-      <div class="diagram-connector" />
-      <div class="diagram-node">
-        <span class="node-number">02</span><div><strong>Concevoir</strong><small>Des frontières claires</small></div><span class="node-symbol">↗</span>
-      </div>
-      <div class="diagram-connector" />
-      <div class="diagram-node">
-        <span class="node-number">03</span><div><strong>Développer</strong><small>Une base testable & évolutive</small></div><span class="node-symbol">↗</span>
-      </div>
-      <div class="diagram-connector" />
-      <div class="diagram-node diagram-node-last">
-        <span class="node-number">04</span><div><strong>Déployer</strong><small>Automatiser & observer</small></div><span class="node-symbol">↗</span>
-      </div>
-      <div class="diagram-footer">
-        <span class="pulse-line" /> SOFTWARE ENGINEERING, PAS À PAS
-      </div>
-    </div>
-  </section>
+      <template #header>
+        <div class="portfolio-diagram-header">
+          <span class="portfolio-diagram-mark">//</span> UNE APPLICATION, DE BOUT EN BOUT <span class="portfolio-diagram-index">01—04</span>
+        </div>
+      </template>
+      <template
+        v-for="(step, index) in steps"
+        :key="step.title"
+      >
+        <UCard
+          variant="outline"
+          class="portfolio-diagram-node"
+          :class="{ 'portfolio-diagram-node-last': index === steps.length - 1 }"
+          :ui="{ body: 'p-0 sm:p-0' }"
+        >
+          <span class="portfolio-node-number">{{ String(index + 1).padStart(2, '0') }}</span>
+          <div><strong>{{ step.title }}</strong><small>{{ step.description }}</small></div>
+        </UCard>
+        <div
+          v-if="index < steps.length - 1"
+          class="portfolio-diagram-connector"
+          aria-hidden="true"
+        />
+      </template>
+      <template #footer>
+        <span class="portfolio-diagram-footer"><span class="portfolio-pulse-line" /> SOFTWARE ENGINEERING, PAS À PAS</span>
+      </template>
+    </UCard>
+  </UPageHero>
 </template>

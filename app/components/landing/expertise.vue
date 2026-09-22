@@ -8,31 +8,34 @@ const areas = [
 </script>
 
 <template>
-  <section
+  <UPageSection
     id="expertise"
-    class="section shell"
+    headline="Expertise"
+    description="J’interviens là où les choix techniques ont un impact durable sur le produit."
+    class="portfolio-section portfolio-expertise"
   >
-    <div class="section-heading">
-      <p class="eyebrow">
-        EXPERTISE
-      </p>
-      <h2>De l’idée au produit,<br><em>avec les bonnes fondations.</em></h2>
-      <p>J’interviens là où les choix techniques ont un impact durable sur le produit.</p>
-    </div>
-    <div class="expertise-grid">
-      <article
-        v-for="area in areas"
+    <template #title>
+      De l’idée au produit,<br><em>avec les bonnes fondations.</em>
+    </template>
+    <UPageGrid class="portfolio-expertise-grid">
+      <UPageCard
+        v-for="(area, index) in areas"
         :key="area.title"
-        class="expertise-item"
+        :title="area.title"
+        :description="area.description"
+        variant="naked"
+        class="portfolio-expertise-card"
       >
-        <span
-          class="item-glyph"
-          aria-hidden="true"
-        >↗</span>
-        <h3>{{ area.title }}</h3>
-        <p>{{ area.description }}</p>
-        <span class="item-stack">{{ area.stack }}</span>
-      </article>
-    </div>
-  </section>
+        <template #leading>
+          <span aria-hidden="true">{{ String(index + 1).padStart(2, '0') }}</span>
+        </template>
+        <template #title>
+          <h3>{{ area.title }}</h3>
+        </template>
+        <template #footer>
+          {{ area.stack }}
+        </template>
+      </UPageCard>
+    </UPageGrid>
+  </UPageSection>
 </template>
