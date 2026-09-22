@@ -19,6 +19,9 @@ export default defineNuxtConfig({
   },
   ui: { fonts: false },
   compatibilityDate: '2026-09-22',
+  nitro: {
+    cloudflare: { deployConfig: true },
+  },
   eslint: {
     config: {
       stylistic: { indent: 2, quotes: 'single', semi: false },
