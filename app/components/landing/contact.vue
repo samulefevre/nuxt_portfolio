@@ -1,16 +1,26 @@
+<script setup lang="ts">
+const ctaUi = {
+  container: 'portfolio-contact-container grid grid-cols-[1.2fr_.8fr] lg:grid-cols-[1.2fr_.8fr] items-end gap-[8%] max-[700px]:grid-cols-1 max-[700px]:gap-12',
+  header: 'text-left',
+}
+</script>
+
 <template>
   <UPageCTA
     id="contact"
     orientation="horizontal"
     variant="naked"
     class="portfolio-contact"
+    :ui="ctaUi"
   >
     <template #header>
       <p class="portfolio-eyebrow">
         CONTACT / COLLABORATION
       </p>
       <h2>Vous avez un projet<br><em>à construire&nbsp;?</em></h2>
-      <p>Échangeons sur vos besoins, vos contraintes et la meilleure façon d’avancer.</p>
+      <p class="portfolio-contact-intro">
+        Échangeons sur vos besoins, vos contraintes et la meilleure façon d’avancer.
+      </p>
     </template>
     <div class="portfolio-contact-actions">
       <UButton
@@ -26,7 +36,7 @@
         aria-label="Profils professionnels"
       >
         <UButton
-          to="https://www.malt.fr/profile/samuellefevre"
+          to="https://www.malt.fr/profile/samuel-lefevre"
           target="_blank"
           label="Malt"
           trailing-icon="i-lucide-arrow-up-right"
