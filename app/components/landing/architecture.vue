@@ -14,7 +14,11 @@ const principles = [
 ]
 
 const principleCardUi = {
-  body: 'flex h-full flex-col justify-between max-[700px]:gap-6',
+  body: 'flex h-full flex-col justify-between p-0 sm:p-0 max-[700px]:gap-6',
+}
+
+const mapUi = {
+  body: 'p-0 sm:p-0',
 }
 
 const principleUi = {
@@ -40,6 +44,7 @@ const principleUi = {
         variant="solid"
         class="portfolio-architecture-map"
         aria-label="Organisation du logiciel en quatre couches"
+        :ui="mapUi"
       >
         <div
           v-for="layer in layers"

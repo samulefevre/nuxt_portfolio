@@ -10,7 +10,7 @@ const areas = [
 
 const cardUi = {
   root: 'min-h-[320px] max-[700px]:min-h-0',
-  container: 'flex h-full flex-col gap-0 py-8 pr-8 pl-0 max-[700px]:px-0 max-[700px]:py-[1.7rem]',
+  container: 'flex h-full flex-col gap-0 p-[2rem_2rem_2.4rem_0] sm:p-[2rem_2rem_2.4rem_0] max-[700px]:p-[1.7rem_0_2rem]',
   wrapper: 'flex flex-1 flex-col',
   leading: 'mb-8 font-mono text-[.72rem] font-medium text-primary max-[700px]:mb-4',
   title: 'mb-[.8rem] text-xl leading-[1.3]',
@@ -20,7 +20,7 @@ const cardUi = {
 
 const insetCardUi = {
   ...cardUi,
-  container: `${cardUi.container} pl-8 max-[700px]:pl-0`,
+  container: `${cardUi.container} p-[2rem_2rem_2.4rem_2rem] sm:p-[2rem_2rem_2.4rem_2rem]`,
 }
 </script>
 

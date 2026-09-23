@@ -17,6 +17,8 @@ const featureUi = {
 
 const caseUi = {
   root: 'grid grid-cols-[.85fr_1.15fr] gap-[10%] -mt-4 border-t border-default rounded-none bg-transparent px-8 pt-8 pb-10 shadow-none divide-y-0 max-[700px]:grid-cols-1 max-[700px]:gap-12 max-[700px]:px-4 max-[700px]:pt-6 max-[700px]:pb-8',
+  header: 'p-0 sm:p-0',
+  body: 'p-0 sm:p-0',
 }
 </script>
 

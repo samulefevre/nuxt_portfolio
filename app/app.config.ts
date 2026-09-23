@@ -35,13 +35,6 @@ export default defineAppConfig({
         description: 'leading-[1.7] text-muted',
       },
     },
-    card: {
-      slots: {
-        header: 'p-0 sm:p-0',
-        body: 'p-0 sm:p-0',
-        footer: 'p-0 sm:p-0',
-      },
-    },
     header: {
       slots: {
         root: 'bg-default border-default backdrop-blur-none',

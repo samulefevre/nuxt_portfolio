@@ -14,7 +14,14 @@ const heroUi = {
 }
 
 const diagramNodeUi = {
-  body: 'grid grid-cols-[2.6rem_1fr] items-center gap-4 p-[1.1rem_1rem] max-[700px]:grid-cols-[2rem_1fr] max-[700px]:p-[.8rem]',
+  body: 'grid grid-cols-[2.6rem_1fr] items-center gap-4 p-[1.1rem_1rem] sm:p-[1.1rem_1rem] max-[700px]:grid-cols-[2rem_1fr] max-[700px]:p-[.8rem]',
+}
+
+const diagramUi = {
+  root: 'divide-y-0',
+  header: 'p-0 sm:p-0',
+  body: 'p-0 sm:p-0',
+  footer: 'p-0 sm:p-0',
 }
 </script>
 
@@ -64,7 +71,7 @@ const diagramNodeUi = {
       variant="soft"
       class="portfolio-diagram blueprint-grid"
       aria-label="Du besoin métier à une application déployée"
-      :ui="{ root: 'divide-y-0' }"
+      :ui="diagramUi"
     >
       <template #header>
         <div class="portfolio-diagram-header">
