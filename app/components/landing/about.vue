@@ -1,9 +1,14 @@
+<script setup lang="ts">
+import { splitSectionUi } from '~/utils/portfolio-ui'
+</script>
+
 <template>
   <UPageSection
     id="about"
     headline="À propos"
     orientation="horizontal"
     class="portfolio-section portfolio-about"
+    :ui="splitSectionUi"
   >
     <template #title>
       Bonjour, moi c’est<br><em>Samuel.</em>

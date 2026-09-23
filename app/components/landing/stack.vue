@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { splitSectionUi } from '~/utils/portfolio-ui'
+
 const groups = [
   { name: 'Frontend', tools: 'Nuxt · Vue · TypeScript · Tailwind CSS · Nuxt UI' },
   { name: 'Backend & data', tools: 'Nitro · Node.js · PostgreSQL · Drizzle · Better Auth' },
@@ -12,6 +14,7 @@ const groups = [
     headline="Stack"
     orientation="horizontal"
     class="portfolio-section portfolio-stack"
+    :ui="splitSectionUi"
   >
     <template #title>
       Les outils au service<br><em>des enjeux.</em>
